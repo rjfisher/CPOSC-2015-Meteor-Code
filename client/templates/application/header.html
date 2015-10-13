@@ -1,0 +1,36 @@
+<template name="header">
+  <header class="nav transition">
+    <a href="http://cposc.org" id="logo">
+      <img src="http://cposc.org/wp-content/uploads/2015/05/cposc-logo-359.png" alt="Logo CPOSC" title="CPOSC" scale="0">
+    </a>
+
+    <nav class="navbar" role="navigation">
+      <div class="collapse navbar-collapse text-fit" id="tyler-navigation">
+        <span class="text-fit-inner" style="display:block">
+          <div class="menu-menu-1-container">
+            <ul id="menu-primary" class="transition">
+              <li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menut-item-20">
+                <a href="{{pathFor 'home'}}">Home</a>
+              </li>
+              <li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101">
+                <a href="{{pathFor 'sessionList'}}">Sessions</a>
+              </li>
+              {{#if loggedIn}}
+              <li id="menu-item register">
+                {{displayName}}
+              </li>
+              {{/if}}
+              <li id="menu-item register">
+                {{#if loggedIn}}
+                  <a href="{{pathFor 'logout'}}">Log Out</a>
+                {{else}}
+                  <a href="{{pathFor 'register'}}">Register/Login</a>
+                {{/if}}
+              </li>
+            </ul>
+          </div>
+        </span>
+      </div>
+    </nav>
+  </header>
+</template>

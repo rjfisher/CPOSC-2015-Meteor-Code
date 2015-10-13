@@ -1,0 +1,33 @@
+<template name="sessionItem">
+  <div class="session">
+    <span class="time">{{time}}</span>
+    <div class="session-inner">
+      <a href="{{pathFor 'session' _id=this._id}}" class="title">
+        <span>
+          {{title}}
+        </span>
+      </a>
+      <span class="location">{{location}}</span>
+      {{#if hasSpeaker}}
+        <span class="speakers-thumbs">
+          <a href="" class="speaker">
+            <img width="54" height="54" src="{{speakerimg}}" class="attachment-54x54 wp-post-image" alt="{{speaker}}" scale="0">
+            <span class="name">
+              <span class="text-fit">
+                <span class="text-fit-inner" style="display:block">{{speaker}}</span>
+              </span>
+            </span>
+          </a>
+        </span>
+      {{else}}
+        <span class="speaker-thumbs">
+        </span>
+      {{/if}}
+
+      <a href="{{pathFor 'session' _id=this._id}}" class="more">
+        More Info
+        <i class="icon-angle-right"></i>
+      </a>
+    </div>
+  </div>
+</template>

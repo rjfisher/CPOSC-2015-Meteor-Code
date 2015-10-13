@@ -1,0 +1,66 @@
+<template name="session">
+  <div class="heading">
+    <div class="container">
+      <h1>{{title}}</h1>
+      <div class="nav">
+        <a href="{{pathFor 'sessionList'}}" title="All">
+          <i class="icon-th-large"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p></p>
+    <div class="row">
+      <div class="col-md-8">
+        {{desc}}
+
+        <p class="clearfix"></p>
+
+        {{> comments}}
+
+        {{#if loggedIn}}
+          <p class="clearfix"></p>
+          <form class=" form form-signin">
+            <textarea name="comment" class="comment-text"></textarea>
+            <p class="clearfix"></p>
+            <button class="btn btn-primary" type="submit">Add Comment</button>
+          </form>
+        {{else}}
+          <p class="clearfix"></p>
+          <a href="{{pathFor 'login'}}" class="single-session-link btn btn-primary">Log In to Comment</a>
+        {{/if}}
+      </div>
+
+      <div class="col-md-4 sessions single">
+        <div class="session">
+          <span class="location">
+            Location:
+            <strong>{{location}}</strong>
+          </span>
+          <span class="date">
+            Date:
+            <strong>2015-10-17</strong>
+          </span>
+          <span class="time">
+            Time:
+            <strong>{{time}}</strong>
+          </span>
+          {{#if hasSpeaker}}
+            <span class="speaker-thumbs">
+              <a href="" class="speaker">
+                <img width="321" height="398" src="{{speakerimg}}" class="attachment-post-thumbnail wp-post-image" alt="{{speaker}}" title="{{speaker}}" scale="0">
+                <span class="name">
+                  <span class="text-fit">
+                    <span class="text-fit-inner" style="display:block">{{speaker}}</span>
+                  </span>
+                </span>
+              </a>
+            </span>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
