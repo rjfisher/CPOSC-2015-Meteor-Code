@@ -22,3 +22,5 @@ iron:router
 sacha:spin
 twbs:bootstrap
 accounts-password
+mouse0270:bootstrap-notify
+momentjs:moment

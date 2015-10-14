@@ -1,4 +1,6 @@
 <template name="comment">
-  <h4>{{text}}</h4>
-  <span>by {{owner}} at {{time}}</span>
+  <div class="comment">
+    <h4>{{text}}</h4>
+    <span class="{{textcolor}}">by {{owner}} {{moment}} ago.</span>
+  </div>
 </template>

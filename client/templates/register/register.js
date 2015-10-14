@@ -11,8 +11,25 @@ Template.register.events({
       password: pass
     }, function(error) {
       if (error) {
-        console.log('error!');
+        var e = $.notify(error, {
+          type: 'danger',
+          animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated bounceOutUp'
+          }
+        });
+
+        return;
       }
+
+      var s = $.notify('Welcome to the CPOSC site!', {
+        type: 'success',
+        animate: {
+          enter: 'animated bounceInDown',
+          exit: 'animated bounceOutUp'
+        }
+      });
+
       Router.go('home');
     });
   }

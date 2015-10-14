@@ -6,3 +6,23 @@
   -moz-box-shadow: inset 2px 2px 2px 2px #dddddd;
   box-shadow: inset 2px 2px 2px 2px #dddddd;
 }
+
+.badge-success {
+  color: #5CB85C;
+  background-color: white;
+}
+
+.badge-info {
+  color: #337AB7;
+  background-color: white;
+}
+
+.badge-warning {
+  color: #F0AD4E;
+  background-color: white;
+}
+
+.badge-danger {
+  color: #D9534F;
+  background-color: white;
+}

@@ -7,8 +7,25 @@ Template.login.events({
 
     return Meteor.loginWithPassword(user, pass, function(error) {
       if (error) {
-        console.log('error!');
+        var e = $.notify(error, {
+          type: 'danger',
+          animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated bounceOutUp'
+          }
+        });
+
+        return;
       }
+
+      var s = $.notify('Logged in successfully', {
+        type: 'success',
+        animate: {
+          enter: 'animated bounceInDown',
+          exit: 'animated bounceOutUp'
+        }
+      });
+
       Router.go('home');
     });
   }

@@ -1,3 +1,16 @@
+Template.session.created = function() {
+  Session.set('currTime', new Date());
+
+  this.handle = Meteor.setInterval(function() {
+    return Session.set('currTime', new Date());
+  }, 1000);
+};
+
+Template.session.detroyed = function() {
+  Session.set('currTime', null);
+  Meteor.clearInterval(this.handle);
+};
+
 Template.session.helpers({
   loggedIn: function() {
     return Meteor.user() !== null;
@@ -24,5 +37,13 @@ Template.session.events({
     });
 
     $(e.target).find('[name=comment]').val('');
+
+    var notify = $.notify('Comment added successfully', {
+      type: 'success',
+      animate: {
+        enter: 'animated bounceInDown',
+        exit: 'animated bounceOutUp'
+      }
+    });
   }
 });
