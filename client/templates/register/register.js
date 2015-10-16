@@ -11,25 +11,11 @@ Template.register.events({
       password: pass
     }, function(error) {
       if (error) {
-        var e = $.notify(error, {
-          type: 'danger',
-          animate: {
-            enter: 'animated bounceInDown',
-            exit: 'animated bounceOutUp'
-          }
-        });
-
+        Bert.alert(error.reason, 'danger', 'fixed-top');
         return;
       }
 
-      var s = $.notify('Welcome to the CPOSC site!', {
-        type: 'success',
-        animate: {
-          enter: 'animated bounceInDown',
-          exit: 'animated bounceOutUp'
-        }
-      });
-
+      Bert.alert('Welcome to the CPOSC site!', 'success', 'fixed-top');
       Router.go('home');
     });
   }

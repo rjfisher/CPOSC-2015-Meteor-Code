@@ -7,25 +7,11 @@ Template.login.events({
 
     return Meteor.loginWithPassword(user, pass, function(error) {
       if (error) {
-        var e = $.notify(error, {
-          type: 'danger',
-          animate: {
-            enter: 'animated bounceInDown',
-            exit: 'animated bounceOutUp'
-          }
-        });
-
+        Bert.alert(error.reason, 'danger', 'fixed-top');
         return;
       }
 
-      var s = $.notify('Logged in successfully', {
-        type: 'success',
-        animate: {
-          enter: 'animated bounceInDown',
-          exit: 'animated bounceOutUp'
-        }
-      });
-
+      Bert.alert('Logged in successfully', 'success', 'fixed-top');
       Router.go('home');
     });
   }
