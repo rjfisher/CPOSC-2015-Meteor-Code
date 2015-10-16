@@ -79,7 +79,7 @@ if(Sessions.find({}).count() === 0) {
     title: 'ES2015: Not Your Grandpa\'s JavaScript',
     desc: 'A high level look at the most popular features of the newest version of JavaScript, officially named ECMAScript 2015 and previously referred to as ES6.\n\nFor years we’ve been hearing about all of the cool features that might be coming to JavaScript, and now the wait is over. The newest JavaScript standard has been completed, and implementation of the spec on the server and in browsers is well underway.\n\nToday’s JavaScript looks much different than what we’re all used to seeing, and it’s going to continue its rapid evolution as there is a new commitment to improve upon the standard every year.',
     speaker: 'Court Ewing',
-    speakerimg: ''
+    speakerimg: 'http://cposc.org/wp-content/uploads/2015/09/court_twitter-150x150.png'
   });
 
   var id = Sessions.insert({
@@ -196,7 +196,7 @@ if(Sessions.find({}).count() === 0) {
     title: 'The Arch Way: Simplicity is King',
     desc: 'For those who do not know Arch Linux, or where it fits into the ecosystem and their own use cases, this presentation and discussion will aim to explain the beauty of the distribution’s philosophy and implementation of its primary directive: K.I.S.S. This will be valuable to Linux users at all levels of experience.',
     speaker: 'Jason Plum',
-    speakerimg: ''
+    speakerimg: 'http://cposc.org/wp-content/uploads/2015/10/jplum-headshot-150x150.jpg'
   });
 
   var id = Sessions.insert({

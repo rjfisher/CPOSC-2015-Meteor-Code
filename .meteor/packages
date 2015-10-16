@@ -20,7 +20,6 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 sacha:spin
-twbs:bootstrap
-accounts-password
 momentjs:moment
 themeteorchef:bert
+accounts-password

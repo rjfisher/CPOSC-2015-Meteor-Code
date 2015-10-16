@@ -27,8 +27,6 @@ Template.session.events({
 
     var comment = $(e.target).find('[name=comment]').val();
 
-    console.log(this._id);
-
     Comments.insert({
       time: new Date(),
       owner: Meteor.user().username,
@@ -38,12 +36,6 @@ Template.session.events({
 
     $(e.target).find('[name=comment]').val('');
 
-    var notify = $.notify('Comment added successfully', {
-      type: 'success',
-      animate: {
-        enter: 'animated bounceInDown',
-        exit: 'animated bounceOutUp'
-      }
-    });
+    Bert.alert('Comment added successfully!', 'success', 'fixed-top');
   }
 });
